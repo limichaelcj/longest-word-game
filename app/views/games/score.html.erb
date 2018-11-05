@@ -1,0 +1,12 @@
+<h1>Score</h1>
+<div class="score">
+  <span><%= @score %></span>
+</div>
+<p><%= @message %></p>
+<%= link_to 'Play again', '/new', id: 'return', class: 'button' %>
+
+<script>
+  document.addEventListener('DOMContentLoaded', ()=>{
+    document.getElementById('return').focus();
+  });
+</script>

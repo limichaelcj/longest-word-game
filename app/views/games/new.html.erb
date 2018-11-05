@@ -1,0 +1,20 @@
+<h1>Longest Word Game</h1>
+<ul class="flex-row">
+  <% @letters.each do |letter| %>
+    <li><span><%= letter %></span></li>
+  <% end %>
+</ul>
+<form action="/score" method="post">
+  <label for="word">What is the longest word you can find?</label>
+  <div>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= hidden_field_tag :letters, @letters.join('') %>
+    <%= hidden_field_tag :time_start, @time_start %>
+    <input id="word" name="word" type="text" required>
+    <input id="submit" type="submit" class="button">
+  </div>
+</form>
+
+<script>
+  document.getElementById('word').focus();
+</script>
