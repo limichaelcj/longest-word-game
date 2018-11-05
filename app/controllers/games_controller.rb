@@ -5,7 +5,7 @@ class GamesController < ApplicationController
   ALPHABET = ('A'..'Z').to_a
   VOWELS = %w(A E I O U)
   CONSONANTS = ALPHABET.reject { |letter| VOWELS.include? letter }
-  COUNT = 8
+  COUNT = 7
   URL = "https://wagon-dictionary.herokuapp.com/"
 
   def new
